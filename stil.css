@@ -1,0 +1,140 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+ font-family: Arial, Helvetica, sans-serif;
+ background: lightgray;
+}
+img{
+ width:70%;
+}
+#bnav{
+ background: #DDFFE6;
+ position: sticky;
+ top: 0;
+ z-index: 2;
+ }
+#bnav .bnav-continut{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ padding: 5px;
+ align-items: center;
+}
+#bnav .logo{
+ width: 150px;
+}
+#bnav .social{
+ justify-self: end;
+}
+#bnav .social a{
+ color: #333;
+}
+#despre_site{
+ color: white;
+ background: #333;
+ padding: 15px;
+ position: relative;
+}
+#despre_site::before{
+ content:'';
+ background: url('./img/im1.jpg') no-repeat center center/cover;
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ opacity: 0.2;
+ }
+#despre_site .despre_site-continut{
+ display: grid;
+ justify-content: center;
+ align-items:center ;
+ height: 80vh;
+ 
+}
+#despre_site .despre_site-text{
+ z-index: 1;
+}
+.btn{
+ display: inline-block;
+ background: rgb(11, 11, 11);
+ color: white;
+ text-decoration: none;
+ padding: 10px 15px;
+}
+.btn:hover{
+  background: #333;
+  color: #DDFFE6;
+}
+.articol{
+ background: #DDFFE6;box-shadow: 5px 5px 10px grey;
+ padding: 2px;
+}
+#articole .articole-continut{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ grid-gap: 20px;
+ text-align: center;
+ padding: 20px;
+}
+#articole .articole-continut p{
+ padding: 10px;
+}
+#articole .articole-continut h2{
+ padding: 5px;
+}
+.articol img{
+ display: block;
+ width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 10px;
+}
+
+#continut-pag{
+  background: white;
+  margin: 5% 10%;
+  box-shadow: 10px 10px 10px grey;
+  padding: 10%;
+}
+.continut-pag-articol h1{
+ padding-bottom: 15px;
+}
+#subsol{
+ /* position: static; */
+ height: 100px;
+ /* bottom: 0px; */
+ /* left: 0px;
+ right: 0px; */
+ /* margin-bottom: 0px; */
+ background: #333;
+ color: #FFA500;
+}
+#subsol .continut-subsol{
+  text-align: center;
+  padding: 20px;
+}
+#subsol .social a{
+  color: #DDFFE6;
+}
+@media screen and (max-width:700px)
+{
+  #articole .articole-continut{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (min-width:1200px)
+{
+  #articole .articole-continut{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+@media screen and (max-width:390px)
+{
+  #bnav .social{
+    display: none;
+  }
+}
+ 
